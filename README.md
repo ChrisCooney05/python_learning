@@ -1,3 +1,4 @@
 # Python Shop
 
-Basics of Python variables, string concatenation, mathematical operators and printing to screen 
+Basics of Python 
+Taken from the Codecademy Python3 course 
