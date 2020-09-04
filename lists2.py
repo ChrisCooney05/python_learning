@@ -22,4 +22,5 @@ three_most_expensive = pizzas[-3:]
 print(three_most_expensive)
 
 num_two_dollar_slices = prices.count(2)
+# count will go through the list and count how many times 2 has been used
 print(num_two_dollar_slices)
