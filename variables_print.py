@@ -33,3 +33,7 @@ print("Customer One Items:")
 print(customer_one_itemization)
 print('Customer One Total:')
 print(customer_one_total)
+
+name = input('What is your name?')
+print('Hello there ' + name)
+# input will require input from the user. the message in the () will be displayed to the CL
