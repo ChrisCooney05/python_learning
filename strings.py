@@ -104,3 +104,19 @@ Eric Mcdaniel ;,;$29.70;,; green ;,; 09/15/17
 green&white;,;09/15/17,   Gail Phelps   ;,;$30.52   
 ;,; green&white&blue   ;,; 09/15/17 , Myrtle Morris 
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
+
+colours = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
+
+daily_sales_replaced = daily_sales.replace(';,;', '^')
+# print(daily_sales_replaced)
+# replaces ;,; with ^ so we can then split each transaction by ','
+
+daily_transactions = daily_sales_replaced.split(',')
+# print(daily_transactions)
+# splits each transaction so we have a list of strings, each string a full transaction
+
+daily_transactions_split = []
+for trans in daily_transactions:
+    daily_transactions_split.append(trans.split('^'))
+# print(daily_transactions_split)
+# gives us a list of of lists, each a transaction
