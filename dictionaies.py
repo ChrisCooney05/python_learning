@@ -38,11 +38,16 @@ for player, words in player_to_words.items():
     for word in words:
         player_points += score_word(word)
     player_to_points[player] = player_points
-print(player_to_points)
+# print(player_to_points)
 # .items() turns both the key and value iterables so we can use the words list or the player name key
 # to note we can also use .key() or .value() if we don't need both key and value
 
 player1 = player_to_words.pop('player1', 'No Player')
-print(player1)
+# print(player1)
 # .pop() mutates the dictionary by deleting the first argument and storing the value in the variable
 # the second argument is a default value if the key does not exist
+
+player_to_words.update({'aNewPlayerIsHere': [
+                       'TEST', 'CAT', 'POKEMON'], 'whatMorePeople': ['HOUSE', 'TABBY', 'WINNER']})
+print(player_to_words)
+# when we need to add multiple new keys and values we can use the update method, this takes another dictionary and adds it
