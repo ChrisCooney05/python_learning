@@ -120,3 +120,33 @@ for trans in daily_transactions:
     daily_transactions_split.append(trans.split('^'))
 # print(daily_transactions_split)
 # gives us a list of of lists, each a transaction
+
+transaction_clean = []
+for trans in daily_transactions_split:
+    clean_trans = []
+    for elem in trans:
+        clean_trans.append(elem.strip())
+    transaction_clean.append(clean_trans)
+# print(transaction_clean)
+# we loop through each list inside of the main list. a new internal list is created with cleaned elements using .strip()
+# each time a list has been cleaned its appended to our new list, the clean_trans is reset and we go again
+
+customers = []
+sales = []
+thread_sold = []
+
+for trans in transaction_clean:
+    customers.append(trans[0])
+    sales.append(trans[1])
+    thread_sold.append(trans[2])
+# print(customers)
+# print(sales)
+# print(thread_sold)
+# move the info I want from each list to another set of lists to be used later
+
+total_sales = 0
+for sale in sales:
+    price = sale.strip('$')
+    total_sales += float(price)
+# print(total_sales)
+# first I strip the $ off each transaction then at the value to total_sales, we need to convert string to float to do so
