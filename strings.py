@@ -150,3 +150,28 @@ for sale in sales:
     total_sales += float(price)
 # print(total_sales)
 # first I strip the $ off each transaction then at the value to total_sales, we need to convert string to float to do so
+
+thread_sold_split = []
+for thread in thread_sold:
+    if '&' in thread:
+        thread_split = thread.split('&')
+        for single_thread in thread_split:
+            thread_sold_split.append(single_thread)
+    else:
+        thread_sold_split.append(thread)
+# print(thread_sold_split)
+# I check each thread for the & character, if it exists I split by & and loop over adding the individual threads to the list
+
+
+def colour_count(colour):
+    return thread_sold_split.count(colour)
+# print(colour_count('white'))
+# returns how many times the passed in colour appears in the list
+
+
+for colour in colours:
+    count = colour_count(colour)
+    print('There have been {count} {colour} colour threads sold today'.format(
+        count=count, colour=colour))
+
+# using the list of colours, I get a print out of how many of each colour have been sold each day
