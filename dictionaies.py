@@ -41,3 +41,8 @@ for player, words in player_to_words.items():
 print(player_to_points)
 # .items() turns both the key and value iterables so we can use the words list or the player name key
 # to note we can also use .key() or .value() if we don't need both key and value
+
+player1 = player_to_words.pop('player1', 'No Player')
+print(player1)
+# .pop() mutates the dictionary by deleting the first argument and storing the value in the variable
+# the second argument is a default value if the key does not exist
