@@ -1,5 +1,7 @@
 from menu import Menu
 from franchise import Franchise
+from business import Business
+
 
 brunch_items = {
     'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50, 'coffee': 1.50, 'espresso': 3.00, 'tea': 1.00, 'mimosa': 10.50, 'orange juice': 3.50
@@ -46,3 +48,16 @@ print(new_installment)
 
 flagship_store.available_menus(12)
 new_installment.available_menus(17)
+
+#<------business------>#
+
+basta = Business("Basta Fazoolin' with my Heart", [
+                 flagship_store, new_installment])
+
+arepas_place_menu = {
+    'arepa pabellon': 7.00, 'pernil arepa': 8.50, 'guayanes arepa': 8.00, 'jamon arepa': 7.50
+}
+
+arepas_place = Franchise("189 Fitzgerald Avenue", arepas_place_menu)
+
+arepa = Business("Take a' Arepa", arepas_place)
